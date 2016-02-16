@@ -5,13 +5,19 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    './index'
-  ],
+  entry: {
+    presentation: [
+      'webpack-hot-middleware/client',
+      './index'
+    ],
+    exercises: [
+      'webpack-hot-middleware/client',
+      './exercises'
+    ]
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/dist/'
   },
   plugins: [
@@ -41,7 +47,7 @@ module.exports = {
       include: __dirname
     }, {
       test: /\.css$/,
-      loaders: ['style', 'raw'],
+      loaders: ['style', 'css', 'postcss'],
       include: __dirname
     }, {
       test: /\.svg$/,
@@ -63,5 +69,14 @@ module.exports = {
       test: /\.(ico)$/,
       loader: 'static-loader'
     }]
+  },
+  postcss: function() {
+    return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      }),
+      require('postcss-cssnext'),
+      require('autoprefixer')
+    ];
   }
 };

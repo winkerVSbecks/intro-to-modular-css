@@ -19,6 +19,10 @@ app.get("/assets/favicon.ico", function(req, res) {
   res.sendFile(path.join(__dirname, "assets/favicon.ico"));
 });
 
+app.get("/exercises", function(req, res) {
+  res.sendFile(path.join(__dirname, "exercises.html"));
+});
+
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });

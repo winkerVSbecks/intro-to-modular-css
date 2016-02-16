@@ -1,20 +1,20 @@
 /* eslint-disable */
 
-var path = require("path");
-var webpack = require("webpack");
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: "./index",
+  entry: './index',
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.join(__dirname, 'dist'),
+    filename: 'presentation.js',
     publicPath: '/dist/'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
-      "process.env": {
-        "NODE_ENV": JSON.stringify("production")
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -27,19 +27,32 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: "babel"
+      loader: 'babel'
     }, {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: 'style-loader!css-loader!postcss'
     }, {
       test: /\.(png|jpg)$/,
-      loader: "url-loader?limit=8192"
+      loader: 'url-loader?limit=8192'
     }, {
       test: /\.svg$/,
-      loader: "url?limit=10000&mimetype=image/svg+xml"
+      loader: 'url?limit=10000&mimetype=image/svg+xml'
+    }, {
+      test: /\.gif$/,
+      loader: 'url-loader?mimetype=image/gif',
+      include: path.join(__dirname, 'assets')
     }, {
       test: /\.(ico)$/,
       loader: 'static-loader'
     }]
+  },
+  postcss: function() {
+    return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      }),
+      require('postcss-cssnext'),
+      require('autoprefixer')
+    ];
   }
 };
