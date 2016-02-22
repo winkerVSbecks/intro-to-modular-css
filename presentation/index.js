@@ -1,9 +1,25 @@
 // Import React
-import React from 'react';
-import { render } from 'react-dom';
+import React, { Component } from 'react';
 import clrs from './clrs.js';
 // Import Spectacle Core tags
-import { Appear, BlockQuote, Cite, Code, CodePane, Deck, Fill, Fit, Heading, Image, Layout, Link, ListItem, List, Markdown, Quote, Slide, Spectacle, Text
+import {
+  BlockQuote,
+  Cite,
+  Code,
+  CodePane,
+  Deck,
+  Fill,
+  Fit,
+  Heading,
+  Image,
+  Layout,
+  Link,
+  ListItem,
+  List,
+  Quote,
+  Slide,
+  Spectacle,
+  Text,
 } from 'spectacle';
 // Import image preloader util
 import preloader from 'spectacle/lib/utils/preloader';
@@ -16,12 +32,19 @@ require('static?!../assets/favicon.ico?output=assets/favicon.ico');
 
 const images = {
   oocss: require('../assets/oocss.png'),
-  goOn: require('../assets/go-on.gif'),
   components: require('../assets/components.jpg'),
   postCss: require('../assets/post-css.gif'),
   flexAxes: require('../assets/flex-axes.jpg'),
   flexDirection: require('../assets/flex-direction.jpg'),
-  flexItems: require('../assets/flex-items.jpg')
+  flexItems: require('../assets/flex-items.jpg'),
+  offCanvasNav: require('../assets/off-canvas.gif'),
+  fixedHeader: require('../assets/fixed-header.gif'),
+  mediaObject: require('../assets/media-object.png'),
+  modalDesktop: require('../assets/modal-desktop.gif'),
+  modal: require('../assets/modal.gif'),
+  modalLayout: require('../assets/modal.png'),
+  sidebar: require('../assets/sidebar.gif'),
+  verticalCentering: require('../assets/vertical-centering.png'),
 };
 
 preloader(images);
@@ -31,10 +54,17 @@ const blueBox = {
   color: clrs.blue,
   border: `4px solid ${ clrs.blue }`,
   borderRadius: 6,
-  padding: '2rem'
+  padding: '2rem',
 };
 
-export default class Presentation extends React.Component {
+const exerciseImage = {
+  border: `1px solid ${ clrs.gray }`,
+  padding: '0.25rem',
+  margin: '1rem',
+  borderRadius: 3,
+};
+
+export default class Presentation extends Component {
   render() {
     return (
       <Spectacle theme={theme}>
@@ -74,7 +104,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
             <CodePane
@@ -110,7 +140,7 @@ export default class Presentation extends React.Component {
               src="//www.chromestatus.com/metrics/css/popularity"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -138,8 +168,7 @@ export default class Presentation extends React.Component {
             </List>
             <Link target="_blank" href="http://www.basscss.com/v7/docs/reference/principles/#base-elements" textColor="gray">&sect; basscss/docs/reference/principles/#base-elements</Link>
           </Slide>
-          <Slide bgImage={ images.oocss.replace('/', '') }>
-          </Slide>
+          <Slide bgImage={ images.oocss.replace('/', '') } />
           <Slide>
             <Heading size={3}>OOCSS</Heading>
             <List>
@@ -178,7 +207,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -217,9 +246,6 @@ export default class Presentation extends React.Component {
               text-transform: uppercase;<br/>
               letter-spacing: 0.2em;
             </Text>
-          </Slide>
-          <Slide bgImage={ images.goOn.replace('/', '') }>
-            <Heading size={1} textColor="white">Go On</Heading>
           </Slide>
           <Slide>
             <Heading size={4}
@@ -385,14 +411,6 @@ export default class Presentation extends React.Component {
               </ListItem>
             </List>
           </Slide>
-          <Slide>
-            <svg className="svg-icon" viewBox="0 0 20 20">
-              <path d="M16.469,8.924l-2.414,2.413c-0.156,0.156-0.408,0.156-0.564,0c-0.156-0.155-0.156-0.408,0-0.563l2.414-2.414c1.175-1.175,1.175-3.087,0-4.262c-0.57-0.569-1.326-0.883-2.132-0.883s-1.562,0.313-2.132,0.883L9.227,6.511c-1.175,1.175-1.175,3.087,0,4.263c0.288,0.288,0.624,0.511,0.997,0.662c0.204,0.083,0.303,0.315,0.22,0.52c-0.171,0.422-0.643,0.17-0.52,0.22c-0.473-0.191-0.898-0.474-1.262-0.838c-1.487-1.485-1.487-3.904,0-5.391l2.414-2.413c0.72-0.72,1.678-1.117,2.696-1.117s1.976,0.396,2.696,1.117C17.955,5.02,17.955,7.438,16.469,8.924 M10.076,7.825c-0.205-0.083-0.437,0.016-0.52,0.22c-0.083,0.205,0.016,0.437,0.22,0.52c0.374,0.151,0.709,0.374,0.997,0.662c1.176,1.176,1.176,3.088,0,4.263l-2.414,2.413c-0.569,0.569-1.326,0.883-2.131,0.883s-1.562-0.313-2.132-0.883c-1.175-1.175-1.175-3.087,0-4.262L6.51,9.227c0.156-0.155,0.156-0.408,0-0.564c-0.156-0.156-0.408-0.156-0.564,0l-2.414,2.414c-1.487,1.485-1.487,3.904,0,5.391c0.72,0.72,1.678,1.116,2.696,1.116s1.976-0.396,2.696-1.116l2.414-2.413c1.487-1.486,1.487-3.905,0-5.392C10.974,8.298,10.55,8.017,10.076,7.825" />
-            </svg>
-            <Link target="_blank" href="https://gist.github.com/winkerVSbecks/1463823d6407e4fd53d3">
-              <Text textColor="blue">Future of CSS at Rangle.io</Text>
-            </Link>
-          </Slide>
           <Slide bgColor="blue">
             <svg className="svg-icon" viewBox="0 0 20 20">
               <polygon style={{ fill: clrs.pink }} points="18.198,7.95 3.168,7.95 3.168,8.634 9.317,9.727 9.317,19.564 12.05,19.564 12.05,9.727 18.198,8.634 " />
@@ -427,9 +445,17 @@ export default class Presentation extends React.Component {
                 backgroundColor: clrs.white,
                 color: clrs.blue,
                 border: `8px solid ${ clrs.blue }`,
-                fontWeight: 'bold'
+                fontWeight: 'bold',
               }}>
               Launch Demo
+            </Link>
+          </Slide>
+          <Slide>
+            <svg className="svg-icon" viewBox="0 0 20 20">
+              <path d="M16.469,8.924l-2.414,2.413c-0.156,0.156-0.408,0.156-0.564,0c-0.156-0.155-0.156-0.408,0-0.563l2.414-2.414c1.175-1.175,1.175-3.087,0-4.262c-0.57-0.569-1.326-0.883-2.132-0.883s-1.562,0.313-2.132,0.883L9.227,6.511c-1.175,1.175-1.175,3.087,0,4.263c0.288,0.288,0.624,0.511,0.997,0.662c0.204,0.083,0.303,0.315,0.22,0.52c-0.171,0.422-0.643,0.17-0.52,0.22c-0.473-0.191-0.898-0.474-1.262-0.838c-1.487-1.485-1.487-3.904,0-5.391l2.414-2.413c0.72-0.72,1.678-1.117,2.696-1.117s1.976,0.396,2.696,1.117C17.955,5.02,17.955,7.438,16.469,8.924 M10.076,7.825c-0.205-0.083-0.437,0.016-0.52,0.22c-0.083,0.205,0.016,0.437,0.22,0.52c0.374,0.151,0.709,0.374,0.997,0.662c1.176,1.176,1.176,3.088,0,4.263l-2.414,2.413c-0.569,0.569-1.326,0.883-2.131,0.883s-1.562-0.313-2.132-0.883c-1.175-1.175-1.175-3.087,0-4.262L6.51,9.227c0.156-0.155,0.156-0.408,0-0.564c-0.156-0.156-0.408-0.156-0.564,0l-2.414,2.414c-1.487,1.485-1.487,3.904,0,5.391c0.72,0.72,1.678,1.116,2.696,1.116s1.976-0.396,2.696-1.116l2.414-2.413c1.487-1.486,1.487-3.905,0-5.392C10.974,8.298,10.55,8.017,10.076,7.825" />
+            </svg>
+            <Link target="_blank" href="https://gist.github.com/winkerVSbecks/1463823d6407e4fd53d3">
+              <Text textColor="blue">Future of CSS at Rangle.io</Text>
             </Link>
           </Slide>
           <Slide bgColor="blue">
@@ -448,7 +474,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -483,7 +509,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -508,7 +534,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -521,7 +547,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -546,7 +572,7 @@ export default class Presentation extends React.Component {
               allowFullScreen="true"
               style={{
                 width: '100%',
-                border: 'none'
+                border: 'none',
               }}>
             </iframe>
           </Slide>
@@ -563,12 +589,70 @@ export default class Presentation extends React.Component {
             </Link>
           </Slide>
           <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Vertical Centering</Heading>
+            <Image style={ exerciseImage }
+              height="600"
+              src={ images.verticalCentering.replace('/', '') } />
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">
+              Media Object
+            </Heading>
+            <Image style={ exerciseImage }
+              height="400"
+              src={ images.mediaObject.replace('/', '') } />
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">
+              Fixed Header
+            </Heading>
+            <Image style={ exerciseImage }
+              height="600"
+              src={ images.fixedHeader.replace('/', '') } />
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Off Canvas Nav</Heading>
+            <Image style={ exerciseImage }
+              src={ images.offCanvasNav.replace('/', '') } />
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Modal</Heading>
+            <Layout>
+              <Fit>
+                <Image style={ exerciseImage }
+                  src={ images.modal.replace('/', '') } />
+              </Fit>
+              <Fit>
+                <Image style={ exerciseImage }
+                  src={ images.modalDesktop.replace('/', '') } />
+              </Fit>
+            </Layout>
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Modal</Heading>
+            <Image style={ exerciseImage }
+              height="600"
+              src={ images.modalLayout.replace('/', '') } />
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Sidebar</Heading>
+            <Image style={ exerciseImage }
+              height="600"
+              src={ images.sidebar.replace('/', '') } />
+          </Slide>
+          <Slide>
             <Heading size={1}>Thank You!</Heading>
           </Slide>
         </Deck>
       </Spectacle>
-    )
+    );
   }
 }
 
-// http://codepen.io/winkerVSbecks/pen/WrPoGa?#
+// fixedHeader
+// mediaObject
+//
+//
+//
+// sidebar
+// verticalCentering

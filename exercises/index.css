@@ -22,6 +22,8 @@
 @import 'basscss-addons/modules/colors';
 @import 'basscss-addons/modules/border-colors';
 @import 'basscss-addons/modules/darken';
+@import 'basscss-addons/modules/btn';
+
 /*
 @import 'basscss-addons/modules/responsive-margin';
 @import 'basscss-addons/modules/responsive-padding';
@@ -30,7 +32,6 @@
 @import 'basscss-addons/modules/forms';
 @import 'basscss-addons/modules/input-range';
 @import 'basscss-addons/modules/progress';
-@import 'basscss-addons/modules/btn';
 @import 'basscss-addons/modules/btn-primary';
 @import 'basscss-addons/modules/btn-outline';
 @import 'basscss-addons/modules/btn-sizes';
@@ -40,6 +41,7 @@
 
 
 /* Custom media queries */
+
 /*
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
@@ -48,6 +50,7 @@
 
 
 /* Custom properties */
+
 /*
 :root {
   --h1: 2rem;
@@ -66,14 +69,17 @@
 }
 */
 
+/**
+ * Utilities
+ */
 .pointer { cursor: pointer; }
 .vh-100 { height: 100vh; }
 .z-1 { z-index: -1; }
 .highlight:hover { background-color: var(--darken-1); }
 
 .icon {
-  width: 1em;
   height: 1em;
+  width: 1em;
 }
 
 .svg-icon path,
@@ -88,7 +94,37 @@
 }
 
 .trim {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+
+/**
+ * Animation Utils
+ */
+
+/* Transition Durations */
+.an-d1 { transition-duration: 100ms; }
+.an-d2 { transition-duration: 200ms; }
+.an-d3 { transition-duration: 400ms; }
+.an-d4 { transition-duration: 600ms; }
+
+/* Transition Properties */
+.an-h { transition-property: height; }
+.an-m { transition-property: margin; }
+.an-opacity { transition-property: opacity; }
+.an-transform { transition-property: transform; }
+.an-all { transition-property: all; }
+
+/* Timing functions */
+.an-ease-in { animation-timing-function: ease-in; }
+.an-ease-out { animation-timing-function: ease-out; }
+.an-ease-in-out { animation-timing-function: ease-in-out; }
+.an-linear { animation-timing-function: linear; }
+
+.an-bezier {
+  animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+an-delay { transition-delay: 300ms; }
