@@ -4,11 +4,18 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './index',
+  entry: {
+    presentation: [
+      './index'
+    ],
+    exercises: [
+      './exercises'
+    ]
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'presentation.js',
-    publicPath: '/dist/'
+    filename: '[name].js',
+    publicPath: '/'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),

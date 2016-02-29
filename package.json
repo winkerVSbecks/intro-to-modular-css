@@ -5,9 +5,10 @@
   "main": "./index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "NODE_ENV=production webpack --config webpack.config.production.js",
+    "html": "cp index.html dist/index.html && cp exercises.html dist/exercises.html",
+    "build": "npm run clean&& NODE_ENV=production webpack --config webpack.config.production.js && npm run html",
     "lint": "eslint --ext .js,.jsx src",
-    "deploy": "npm run clean & npm run build && bash deploy.sh",
+    "deploy": "bash deploy.sh",
     "start": "node server.js"
   },
   "author": "Varun Vachhar <varunvachhar@gmail.com>",
