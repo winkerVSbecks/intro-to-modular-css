@@ -589,10 +589,35 @@ export default class Presentation extends Component {
             </Link>
           </Slide>
           <Slide>
+          <Heading size={4}>Exercises</Heading>
+            <CodePane
+              margin="2rem 0"
+              lang="shell"
+              source={ require('raw!../assets/exercises') }
+              />
+              <Text textAlign="left"
+                textSize="2rem"
+                margin="0 0 2rem 0">
+                Open <Link textColor="blue"
+                 href="http://localhost:3000/exercises.html">localhost:3000/exercises.html</Link>
+              </Text>
+              <Text textAlign="left"
+                textSize="2rem">
+                Solutions available at <Link textColor="blue"
+                 href="http://winkervsbecks.github.io/intro-to-modular-css/exercises.html">winkervsbecks.github.io/intro-to-modular-css/exercises.html</Link>
+              </Text>
+          </Slide>
+          <Slide>
             <Heading size={4} textSize="2rem" textAlign="left" margin="0">Vertical Centering</Heading>
             <Image style={ exerciseImage }
               height="600"
               src={ images.verticalCentering.replace('/', '') } />
+          </Slide>
+          <Slide>
+            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Sidebar</Heading>
+            <Image style={ exerciseImage }
+              height="600"
+              src={ images.sidebar.replace('/', '') } />
           </Slide>
           <Slide>
             <Heading size={4} textSize="2rem" textAlign="left" margin="0">
@@ -635,12 +660,6 @@ export default class Presentation extends Component {
               src={ images.modalLayout.replace('/', '') } />
           </Slide>
           <Slide>
-            <Heading size={4} textSize="2rem" textAlign="left" margin="0">Sidebar</Heading>
-            <Image style={ exerciseImage }
-              height="600"
-              src={ images.sidebar.replace('/', '') } />
-          </Slide>
-          <Slide>
             <Heading size={1}>Thank You!</Heading>
           </Slide>
         </Deck>
@@ -648,11 +667,3 @@ export default class Presentation extends Component {
     );
   }
 }
-
-// fixedHeader
-// mediaObject
-//
-//
-//
-// sidebar
-// verticalCentering
