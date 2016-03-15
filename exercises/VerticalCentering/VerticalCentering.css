@@ -1,0 +1,8 @@
+.VerticalCentering__container {
+  height: var(--container-height);
+  line-height: var(--container-height);
+}
+
+:root {
+  --container-height: 80px;
+}

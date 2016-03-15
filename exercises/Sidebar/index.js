@@ -1,17 +1,11 @@
 import React from 'react';
-import Radium from 'radium';
+import './Sidebar.css';
 
 
 const Sidebar = () => {
-  const styles = {
-    sidebar: { width: '25%' },
-    main: { marginLeft: '25%' },
-  };
-
   return (
     <div>
-      <aside style={ styles.sidebar }
-        className="fixed top-0 bottom-0 left-0 col-3 bg-aqua">
+      <aside className="fixed top-0 bottom-0 left-0 col-3 bg-aqua Sidebar">
         <h3 className="caps bold navy px2">Sidebar</h3>
         <ul className="list-reset navy">
           <li className="px2 py1">List Reset</li>
@@ -21,8 +15,7 @@ const Sidebar = () => {
         </ul>
       </aside>
 
-      <main style={ styles.main }
-        className="px2">
+      <main className="px2 Sidebar__body">
         <h3 className="caps bold">Main Content Area</h3>
         <img className="mx-auto" src="http://placehold.it/600x400" />
         <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.</p>
@@ -43,4 +36,4 @@ const Sidebar = () => {
   );
 };
 
-export default Radium(Sidebar);
+export default Sidebar;

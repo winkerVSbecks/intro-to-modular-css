@@ -1,12 +1,9 @@
 import React from 'react';
-import Radium from 'radium';
+import './OffCanvasNav.css';
 
-const Header = Radium(({ hamburgerAction }) => {
-  const styles = { height: 64 };
-
+const Header = ({ hamburgerAction }) => {
   return (
-    <header className="flex-none flex items-center bg-blue white h3"
-      style={ styles }>
+    <header className="flex-none flex items-center bg-blue white h3 OffCanvasNav__header">
       <div className="pointer px2 self-stretch flex items-center"
         onClick={ hamburgerAction }>
         <svg className="icon" viewBox="0 0 20 20">
@@ -19,6 +16,6 @@ const Header = Radium(({ hamburgerAction }) => {
       <h3 className="caps m0 trim">Off Canvas Nav</h3>
     </header>
   );
-});
+};
 
 export default Header;

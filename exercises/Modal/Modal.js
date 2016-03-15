@@ -1,14 +1,10 @@
 import React from 'react';
 import Radium from 'radium';
 import {Motion, spring} from 'react-motion';
+import './Modal.css';
 
 
 const Modal = ({ title, isVisible, toggle, children }) => {
-  const styles = {
-    height: '100%',
-    '@media (min-width: 40em)': { height: '75%' },
-  };
-
   const containerStyles = { display: isVisible ? '' : 'none' };
   const motionStyle = {
     y: spring(isVisible ? 0 : 150),
@@ -22,11 +18,8 @@ const Modal = ({ title, isVisible, toggle, children }) => {
           <aside style={ containerStyles }
             className="fixed top-0 left-0 col-12 vh-100 flex items-center z4 bg-darken-4">
 
-            <div style={[styles, {
-              transform: `translate3d(0 , ${y}%, 0)`,
-              opacity,
-            }]}
-              className="col-12 sm-col sm-col-8 mx-auto bg-white">
+            <div style={ getModalStyles(y, opacity) }
+              className="col-12 sm-col sm-col-8 mx-auto bg-white Modal">
 
               <header className="bg-blue white flex items-center py2 center">
                 <div className="col-2"></div>
@@ -49,3 +42,13 @@ const Modal = ({ title, isVisible, toggle, children }) => {
 };
 
 export default Radium(Modal);
+
+/**
+ * Utils
+ */
+function getModalStyles(y, opacity) {
+  return {
+    transform: `translate3d(0 , ${y}%, 0)`,
+    opacity,
+  };
+}
