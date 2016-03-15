@@ -133,7 +133,7 @@ export default class Presentation extends Component {
             </Heading>
           </Slide>
           <Slide>
-            <Text lineHeight={1.5}>Our usual approach is to create new classes. While declaring the same properties with same values but,  within different contexts.</Text>
+            <Text lineHeight={1.5}>Our usual approach is to create new classes. While declaring the same properties with same values but within different contexts.</Text>
           </Slide>
           <Slide>
             <iframe height={ 500 }
@@ -272,7 +272,7 @@ export default class Presentation extends Component {
                 </Link>
               </ListItem>
               <ListItem>
-                <Link target="_blank" href="https://github.com/basscss/type-scale/blob/master/index.css">
+                <Link target="_blank" href="http://www.basscss.com/v7/docs/type-scale/">
                   <Text>Basscss type scale</Text>
                 </Link>
               </ListItem>
@@ -469,7 +469,7 @@ export default class Presentation extends Component {
           <Slide>
             <iframe height={ 360 }
               scrolling="no"
-              src="//caniuse.com/flexbox/embed"
+              src="http://caniuse.com/flexbox/embed"
               allowTransparency="true"
               allowFullScreen="true"
               style={{
