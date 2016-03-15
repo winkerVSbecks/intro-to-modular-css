@@ -1,0 +1,4 @@
+@import '../variables.css';
+
+.FixedHeader { height: var(--header-height); }
+.Main { margin-top: var(--header-height); }

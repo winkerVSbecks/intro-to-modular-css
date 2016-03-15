@@ -74,7 +74,7 @@ export default class Presentation extends Component {
               Modular CSS
             </Heading>
             <Text lineHeight={1.2} margin="2rem 0">An intro to building apps with immutable &amp; atomic CSS classes.</Text>
-            <Link target="_blank" href="https://github.com/winkerVSbecks/intro-to-modular-css">
+            <Link target="_blank" href="https://github.com/rangle/intro-to-modular-css">
               <Text textColor="red">view on github</Text>
             </Link>
           </Slide>
@@ -84,8 +84,9 @@ export default class Presentation extends Component {
               <ListItem>Base Elements</ListItem>
               <ListItem>Immutable Utilities</ListItem>
               <ListItem>Components</ListItem>
-              <ListItem>In-line Styles</ListItem>
               <ListItem>PostCSS</ListItem>
+              <ListItem>Flexbox</ListItem>
+              <ListItem>Exercises</ListItem>
             </List>
           </Slide>
           <Slide>
@@ -164,6 +165,7 @@ export default class Presentation extends Component {
             <List>
               <ListItem>Styles for HTML elements</ListItem>
               <ListItem>Normalize.css</ListItem>
+              <ListItem>basscss-basic</ListItem>
               <ListItem>Base form styles</ListItem>
             </List>
             <Link target="_blank" href="http://www.basscss.com/v7/docs/reference/principles/#base-elements" textColor="gray">&sect; basscss/docs/reference/principles/#base-elements</Link>
@@ -389,14 +391,14 @@ export default class Presentation extends Component {
           <Slide>
             <Heading size={4}>Components</Heading>
             <Text lineHeight={2} textColor="blue">
-              Build using BEM / In-line styles
+              Build using BEM
             </Text>
             <Link target="_blank" href="https://github.com/rangle/guidelines/blob/master/content/10-css-and-sass/4-bem.md">
               <Text margin="4rem 0" textColor="pink">more about BEM here</Text>
             </Link>
           </Slide>
           <Slide>
-            <Heading size={4}>In-line Styles</Heading>
+            <Heading size={4}>For Inline Styles in React</Heading>
             <List>
               <ListItem>
                 Use <Link target="_blank" textColor="black" href="http://stack.formidable.com/radium/">
@@ -604,7 +606,7 @@ export default class Presentation extends Component {
               <Text textAlign="left"
                 textSize="2rem">
                 Solutions available at <Link textColor="blue"
-                 href="http://winkervsbecks.github.io/intro-to-modular-css/exercises.html">winkervsbecks.github.io/intro-to-modular-css/exercises.html</Link>
+                 href="http://rangle.github.io/intro-to-modular-css/exercises.html">rangle.github.io/intro-to-modular-css/exercises.html</Link>
               </Text>
           </Slide>
           <Slide>

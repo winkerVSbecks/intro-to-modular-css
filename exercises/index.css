@@ -16,7 +16,6 @@
 @import 'basscss-border';
 @import 'basscss-hide';
 
-
 /* Optional Modules (not included in Basscss by default) */
 @import 'basscss-addons/modules/background-colors';
 @import 'basscss-addons/modules/colors';
@@ -39,43 +38,33 @@
 @import 'basscss-addons/modules/background-images';
 */
 
-
-/* Custom media queries */
-
-/*
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 52em);
-@custom-media --breakpoint-lg (min-width: 64em);
-*/
-
-
-/* Custom properties */
-
-/*
-:root {
-  --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: .875rem;
-  --h6: .75rem;
-  --bold-font-weight: bold;
-  --space-1: .5rem;
-  --space-2: 1rem;
-  --space-3: 2rem;
-  --space-4: 4rem;
-  --border-width: 1px;
-  --border-radius: 3px;
-}
-*/
+@import './variables.css';
 
 /**
  * Utilities
  */
 .pointer { cursor: pointer; }
 .vh-100 { height: 100vh; }
+.vh-50 { height: 50vh; }
 .z-1 { z-index: -1; }
 .highlight:hover { background-color: var(--darken-1); }
+
+.trim {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.translate-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/**
+ * Icon
+ */
 
 .icon {
   height: 1em;
@@ -92,13 +81,6 @@
   stroke: currentcolor;
   stroke-width: 1;
 }
-
-.trim {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 
 /**
  * Animation Utils
