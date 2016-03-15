@@ -39,14 +39,19 @@ module.exports = {
       test: /\.css$/,
       loader: 'style-loader!css-loader!postcss'
     }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
-    }, {
       test: /\.svg$/,
-      loader: 'url?limit=10000&mimetype=image/svg+xml'
+      loader: 'url?limit=10000&mimetype=image/svg+xml',
+      include: path.join(__dirname, 'assets')
+    }, {
+      test: /\.(png)$/,
+      loader: 'url-loader?mimetype=image/png?name=dist/[hash].[ext]'
+    }, {
+      test: /\.jpg$/,
+      loader: 'url-loader?mimetype=image/jpg?name=dist/[hash].[ext]',
+      include: path.join(__dirname, 'assets')
     }, {
       test: /\.gif$/,
-      loader: 'url-loader?mimetype=image/gif',
+      loader: 'url-loader?mimetype=image/gif?name=dist/[hash].[ext]',
       include: path.join(__dirname, 'assets')
     }, {
       test: /\.(ico)$/,
