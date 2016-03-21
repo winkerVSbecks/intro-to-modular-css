@@ -45,6 +45,10 @@ const images = {
   modalLayout: require('../assets/modal.png'),
   sidebar: require('../assets/sidebar.gif'),
   verticalCentering: require('../assets/vertical-centering.png'),
+  reactComponent: require('../assets/react-component.png'),
+  bemExample: require('../assets/bem-example.png'),
+  angular2Component: require('../assets/angular-2-component.png'),
+  scopedStyles: require('../assets/scoped-styles.png')
 };
 
 preloader(images);
@@ -388,31 +392,6 @@ export default class Presentation extends Component {
               </ListItem>
             </List>
           </Slide>
-          <Slide>
-            <Heading size={4}>Components</Heading>
-            <Text lineHeight={2} textColor="blue">
-              Build using BEM
-            </Text>
-            <Link target="_blank" href="https://github.com/rangle/guidelines/blob/master/content/10-css-and-sass/4-bem.md">
-              <Text margin="4rem 0" textColor="pink">more about BEM here</Text>
-            </Link>
-          </Slide>
-          <Slide>
-            <Heading size={4}>For Inline Styles in React</Heading>
-            <List>
-              <ListItem>
-                Use <Link target="_blank" textColor="black" href="http://stack.formidable.com/radium/">
-                  <b>Radium</b>
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link target="_blank" href="https://github.com/rangle/basscss-radium"
-                  textColor="black">
-                  <b>basscss-radium</b>
-                </Link>
-              </ListItem>
-            </List>
-          </Slide>
           <Slide bgColor="blue">
             <svg className="svg-icon" viewBox="0 0 20 20">
               <polygon style={{ fill: clrs.pink }} points="18.198,7.95 3.168,7.95 3.168,8.634 9.317,9.727 9.317,19.564 12.05,19.564 12.05,9.727 18.198,8.634 " />
@@ -459,6 +438,72 @@ export default class Presentation extends Component {
             <Link target="_blank" href="https://gist.github.com/winkerVSbecks/1463823d6407e4fd53d3">
               <Text textColor="blue">Future of CSS at Rangle.io</Text>
             </Link>
+          </Slide>
+          <Slide>
+            <Heading size={4}>Component Examples</Heading>
+            <Text lineHeight={2} textColor="blue">
+              Three things to think about:
+              <List>
+                <ListItem>How to 'transpile' it</ListItem>
+                <ListItem>How to handle vendor prefixes</ListItem>
+                <ListItem>How to scope styles to their component</ListItem>
+              </List>
+            </Text>
+          </Slide>
+          <Slide>
+            <Heading size={4}>A Component in React</Heading>
+            <Image src={ images.reactComponent }
+              style={{
+                width: 'auto',
+                height: '360',
+                border: 'none',
+                borderRadius: '5px'
+              }}/>
+          </Slide>
+          <Slide>
+            <Heading size={4}>Scoping Styles with BEM</Heading>
+            <Image src={ images.bemExample }
+              style={{
+                width: 'auto',
+                height: '330',
+                border: 'none',
+                borderRadius: '5px'
+              }}/>
+          </Slide>
+          <Slide>
+            <Heading size={4}>BEM and Radium</Heading>
+            <List>
+              <ListItem>
+                <Link target="_blank" textColor="black" href="https://github.com/rangle/guidelines/blob/master/content/10-css-and-sass/4-bem.md">
+                  More about BEM here
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link target="_blank" textColor="black" href="http://stack.formidable.com/radium/">
+                  Radium Docs
+                </Link>
+              </ListItem>
+            </List>
+          </Slide>
+          <Slide>
+            <Heading size={4}>A Component in Angular 2</Heading>
+            <Image src={ images.angular2Component }
+              style={{
+                width: 'auto',
+                height: '330',
+                border: 'none',
+                borderRadius: '5px'
+              }}/>
+          </Slide>
+          <Slide>
+            <Heading size={4}>Angular 2&apos;s ViewEncapsulation</Heading>
+            <Image src={ images.scopedStyles }
+              style={{
+                width: 'auto',
+                height: '330',
+                border: 'none',
+                borderRadius: '5px'
+              }}/>
           </Slide>
           <Slide bgColor="blue">
             <svg className="svg-icon" viewBox="0 0 20 20">
