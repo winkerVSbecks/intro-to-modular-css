@@ -1,3 +1,4 @@
-$ git clone git@github.com:winkerVSbecks/intro-to-modular-css.git
+$ git clone git@github.com:rangle/intro-to-modular-css.git
 $ git checkout exercises-base
+$ npm install
 $ npm start
