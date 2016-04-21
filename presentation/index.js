@@ -46,7 +46,6 @@ const images = {
   sidebar: require('../assets/sidebar.gif'),
   verticalCentering: require('../assets/vertical-centering.png'),
   reactComponent: require('../assets/react-component.png'),
-  bemExample: require('../assets/bem-example.png'),
   angular2Component: require('../assets/angular-2-component.png'),
   scopedStyles: require('../assets/scoped-styles.png')
 };
@@ -461,27 +460,23 @@ export default class Presentation extends Component {
               }}/>
           </Slide>
           <Slide>
-            <Heading size={4}>Scoping Styles with BEM</Heading>
-            <Image src={ images.bemExample }
-              style={{
-                width: 'auto',
-                height: '330',
-                border: 'none',
-                borderRadius: '5px'
-              }}/>
-          </Slide>
-          <Slide>
-            <Heading size={4}>BEM and Radium</Heading>
+            <Heading size={4}>Scoping Styles in React and Angular 1</Heading>
             <List>
               <ListItem>
-                <Link target="_blank" textColor="black" href="https://github.com/rangle/guidelines/blob/master/content/10-css-and-sass/4-bem.md">
-                  More about BEM here
-                </Link>
+                Use 'postcss-modules-local-by-default'.
               </ListItem>
               <ListItem>
-                <Link target="_blank" textColor="black" href="http://stack.formidable.com/radium/">
-                  Radium Docs
-                </Link>
+                Write your CSS normally, in a component-specific CSS file
+              </ListItem>
+              <ListItem>
+                Import it into your component JS as above.
+              </ListItem>
+              <ListItem>
+                Those styles will be transformed to only apply to that
+                component by PostCSS.
+              </ListItem>
+              <ListItem>
+                No more BEM needed!
               </ListItem>
             </List>
           </Slide>
