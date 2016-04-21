@@ -47,7 +47,7 @@ const images = {
   verticalCentering: require('../assets/vertical-centering.png'),
   reactComponent: require('../assets/react-component.png'),
   angular2Component: require('../assets/angular-2-component.png'),
-  scopedStyles: require('../assets/scoped-styles.png')
+  scopedStyles: require('../assets/scoped-styles.png'),
 };
 
 preloader(images);
@@ -456,7 +456,7 @@ export default class Presentation extends Component {
                 width: 'auto',
                 height: '360',
                 border: 'none',
-                borderRadius: '5px'
+                borderRadius: '5px',
               }}/>
           </Slide>
           <Slide>
@@ -487,7 +487,7 @@ export default class Presentation extends Component {
                 width: 'auto',
                 height: '330',
                 border: 'none',
-                borderRadius: '5px'
+                borderRadius: '5px',
               }}/>
           </Slide>
           <Slide>
@@ -497,7 +497,7 @@ export default class Presentation extends Component {
                 width: 'auto',
                 height: '330',
                 border: 'none',
-                borderRadius: '5px'
+                borderRadius: '5px',
               }}/>
           </Slide>
           <Slide bgColor="blue">

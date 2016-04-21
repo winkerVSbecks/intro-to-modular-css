@@ -7,7 +7,9 @@
     "clean": "rimraf dist",
     "html": "cp index.html dist/index.html && cp exercises.html dist/exercises.html",
     "build": "npm run clean&& NODE_ENV=production webpack --config webpack.config.production.js && npm run html",
-    "lint": "eslint --ext .js,.jsx src",
+    "lint": "eslint --ext .js,.jsx exercises",
+    "lint-css": "stylelint './exercises/**/*.css'",
+    "test": "npm run lint && npm run lint-css",
     "deploy": "bash deploy.sh",
     "start": "node server.js"
   },
@@ -51,6 +53,7 @@
     "rimraf": "^2.4.4",
     "static-loader": "^0.1.8",
     "style-loader": "^0.13.0",
+    "stylelint": "^6.0.3",
     "surge": "latest",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.8",
