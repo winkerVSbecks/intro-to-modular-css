@@ -48,6 +48,7 @@ const images = {
   reactComponent: require('../assets/react-component.png'),
   angular2Component: require('../assets/angular-2-component.png'),
   scopedStyles: require('../assets/scoped-styles.png'),
+  sketchMockup: require('../assets/sketch-mockup-example.png'),
 };
 
 preloader(images);
@@ -310,6 +311,16 @@ export default class Presentation extends Component {
                 <Text>Basscss white-space scale</Text>
               </Link>
             </Text>
+          </Slide>
+          <Slide>
+            <Heading size={4} lineHeight={1.5}>White-Space Scale Example</Heading>
+            <Image src={ images.sketchMockup }
+              style={{
+                borderRadius: 3,
+                boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+                height: 'auto',
+                width: 758,
+              }}/>
           </Slide>
           <Slide>
             <Heading size={4}>Layout Utilities</Heading>
