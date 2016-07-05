@@ -31,7 +31,6 @@ require('./theme/index.css');
 require('static?!../assets/favicon.ico?output=assets/favicon.ico');
 
 const images = {
-  oocss: require('../assets/oocss.png'),
   components: require('../assets/components.jpg'),
   postCss: require('../assets/post-css.gif'),
   flexAxes: require('../assets/flex-axes.jpg'),
@@ -174,7 +173,6 @@ export default class Presentation extends Component {
             </List>
             <Link target="_blank" href="http://www.basscss.com/v7/docs/reference/principles/#base-elements" textColor="gray">&sect; basscss/docs/reference/principles/#base-elements</Link>
           </Slide>
-          <Slide bgImage={ images.oocss.replace('/', '') } />
           <Slide>
             <Heading size={3}>OOCSS</Heading>
             <List>
