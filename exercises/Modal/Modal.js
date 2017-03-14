@@ -24,7 +24,7 @@ const Modal = ({ title, isVisible, toggle, children }) => {
               <header className="bg-blue white flex items-center pv3 center">
                 <div className="w-20"></div>
 
-                <h3 className="ma0 bold trim ttu tracked flex-auto">{ title }</h3>
+                <h3 className="ma0 bold truncate ttu tracked flex-auto">{ title }</h3>
 
                 <button className="bg-blue bn white pa0 w-20"
                   onClick={ toggle }>✖︎</button>
