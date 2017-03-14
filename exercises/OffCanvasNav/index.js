@@ -21,12 +21,12 @@ class OffCanvasNav extends Component {
 
     return (
       <div>
-        <aside className="vh-100 bg-navy absolute top-0 left-0 bottom-0 col-6 z-1">
+        <aside className="vh-100 bg-navy absolute top-0 left-0 bottom-0 w-50 z-1">
         </aside>
 
         <main className="vh-100 bg-white flex flex-column" style={ styles }>
           <Header hamburgerAction={ this.toggleSidebar } />
-          <div className="p2 flex-auto overflow-scroll">
+          <div className="pa2 flex-auto overflow-scroll">
             <img src="http://placehold.it/600" />
             <img src="http://placehold.it/600" />
             <img src="http://placehold.it/600" />

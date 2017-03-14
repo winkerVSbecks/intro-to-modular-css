@@ -2,7 +2,6 @@
  * Exercises
  */
 @import 'basscss-basic';
-@import 'tachyons/src/tachyons';
 
 /* Basscss Modules */
 @import 'basscss-type-scale';
@@ -39,6 +38,7 @@
 @import 'basscss-addons/modules/background-images';
 */
 
+@import 'tachyons/src/tachyons';
 @import './variables.css';
 
 /**
