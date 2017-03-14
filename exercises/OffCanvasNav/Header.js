@@ -13,7 +13,7 @@ const Header = ({ hamburgerAction }) => {
                     c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z" />
         </svg>
       </div>
-      <h3 className="ttu tracked ma0 trim">Off Canvas Nav</h3>
+      <h3 className="ttu tracked ma0 truncate">Off Canvas Nav</h3>
     </header>
   );
 };
