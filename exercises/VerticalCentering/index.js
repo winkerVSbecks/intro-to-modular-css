@@ -10,10 +10,10 @@ const VerticalCentering = () => {
       </div>
 
       <div className="flex items-stretch mb4">
-        <div className="bg-red white p3 flex items-center caps bold">
+        <div className="bg-red white pa3 flex items-center ttu tracked bold">
           Bacon
         </div>
-        <div className="bg-aqua navy p3 flex-auto">
+        <div className="bg-light-blue navy pa3 flex-auto">
           Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.
         </div>
       </div>

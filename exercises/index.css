@@ -38,6 +38,7 @@
 @import 'basscss-addons/modules/background-images';
 */
 
+@import 'tachyons/src/tachyons';
 @import './variables.css';
 
 /**
@@ -48,12 +49,6 @@
 .vh-50 { height: 50vh; }
 .z-1 { z-index: -1; }
 .highlight:hover { background-color: var(--darken-1); }
-
-.trim {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
 .translate-center {
   left: 50%;
