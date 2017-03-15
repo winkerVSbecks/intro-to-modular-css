@@ -8,4 +8,5 @@
 :root {
   --header-height: 64px;
   --sidebar-width: 33%;
+  --darken-1: rgba(0, 0, 0, 0.0625);
 }
