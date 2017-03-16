@@ -6,7 +6,7 @@ const FixedHeader = () => {
   return (
     <div>
       <header
-        className="fixed top-0 left-0 right-0 bg-blue ph3 flex items-center FixedHeader">
+        className="bg-blue ph3 flex items-center FixedHeader">
         <h3 className="ttu tracked bold white ma0">Header</h3>
       </header>
 
